@@ -49,7 +49,7 @@ media_player:
     type: string
     default: empty
   source_bouquet:
-    description: Provide a specific bouquet reference for the bouquet you would like to see loaded into the media player "Sources" interface.
+    description: Provide a specific bouquet reference for the bouquet you would like to see loaded into the media player "Sources" interface. This is not the name of the bouquet, see the hint at the end.
     required: false
     type: string
     default: empty
@@ -79,3 +79,9 @@ media_player:
     type: string
     default: Enigma2 Media Player
 {% endconfiguration %}
+
+Find out the id of your source_bouquet:
+- Open http://enigma2ip.local/web/getservices in a browser
+- Copy the string of your wanted bouquet **without** the bouquet name itself at the end. 
+- For example **1:7:1:0:0:0:0:0:0:0:FROM BOUQUET "userbouquet.favourites.tv" ORDER BY bouquet** (Without _Favourites_ at the end)
+- Insert it as source_bouquet
